@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "alexwoodma-leakfind"
+version = "0.1.0"
+description = "扫描输出里的密钥、令牌与个人信息模式，标出位置并做部分遮蔽"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "alexwoodma" }]
+keywords = ["ai", "llm", "cli", "analysis"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://alexwoodma.github.io"
+Repository = "https://github.com/alexwoodma/leakfind"
+Issues = "https://github.com/alexwoodma/leakfind/issues"
+
+[project.scripts]
+leakfind = "leakfind:main"
+
+[tool.setuptools]
+py-modules = ["leakfind"]
